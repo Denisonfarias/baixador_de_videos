@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: baixador-meutudo
+    runtime: docker
+    plan: free
+    region: oregon
+    healthCheckPath: /healthz
+    envVars:
+      - key: APP_PASSWORD
+        sync: false
+      - key: COOKIES_FILE
+        value: ""
